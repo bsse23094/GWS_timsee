@@ -112,13 +112,11 @@ body {
 .page::before {
     left: 10px; top: 16px;
     width: 60px; height: 30px;
-    background-image: url('https://i.imgur.com/JV1ZJPw.png');
     background-size: contain;
 }
 .page::after {
     right: 22px; bottom: 18px;
     width: 70px; height: 38px;
-    background-image: url('https://i.imgur.com/vOdc80I.png');
     background-size: contain;
 }
 /* Birthday page styles (balloons, cake, etc) */
