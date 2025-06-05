@@ -3,752 +3,383 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Good Girl 💜</title>
+    <title>Happy Birthday Fatima! 🎂💜</title>
     <link rel="icon" type="image/png" href="ramona-flowers-scott-pilgrim-v0-ztcvlqsush5c1.png">
-    <style>
-        body {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #f5f0ff;
-            color: #4a3a6e;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        header {
-            text-align: center;
-            padding: 30px 0;
-            background: linear-gradient(135deg, #e2c2ff 0%, #f8bbd0 100%);
-            border-bottom: 5px solid #b388ff;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        h1 {
-            font-size: 3em;
-            color: #6a1b9a;
-            text-shadow: 2px 2px 0 #ce93d8, 4px 4px 0 #f8bbd0;
-            margin: 0;
-            position: relative;
-            z-index: 2;
-        }
-        
-        h2 {
-            color: #7e57c2;
-            border-bottom: 2px dashed #ba68c8;
-            padding-bottom: 10px;
-            margin-top: 40px;
-        }
-        
-        .page {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 30px;
-            margin-bottom: 40px;
-            border-radius: 10px;
-            border: 3px solid #ba68c8;
-            box-shadow: 0 0 20px #d1c4e9;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .page::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: #d1c4e9;
-            opacity: 0.05;
-            z-index: 0;
-        }
-        
-        .content {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .pixel-heart {
-            font-size: 2em;
-            color: #ab47bc;
-            text-shadow: 2px 2px 0 #e1bee7;
-        }
-        
-        .nickname {
-            display: inline-block;
-            background-color: #ce93d8;
-            color: #4a148c;
-            padding: 5px 10px;
-            margin: 5px;
-            border-radius: 5px;
-            font-weight: bold;
-            border: 1px solid #9c27b0;
-        }
-        
-        .memory {
-            background-color: rgba(206, 147, 216, 0.2);
-            padding: 15px;
-            margin: 10px 0;
-            border-left: 4px solid #ba68c8;
-            border-radius: 0 5px 5px 0;
-        }
-        
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .gallery img {
-            width: 100%;
-            border: 3px solid #ba68c8;
-            border-radius: 5px;
-            transition: transform 0.3s;
-        }
-        
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-        
-        .pixel-border {
-            border: 4px solid #ba68c8;
-            border-image: repeating-linear-gradient(45deg, #ba68c8, #f8bbd0 10px) 4;
-        }
-        
-        .confession {
-            background-color: rgba(248, 187, 208, 0.3);
-            padding: 20px;
-            border-radius: 5px;
-            border: 2px dashed #7e57c2;
-            line-height: 1.6;
-        }
-        
-        .nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 20px 0;
-            position: sticky;
-            top: 0;
-            background-color: rgba(245, 240, 255, 0.9);
-            padding: 15px;
-            z-index: 100;
-            backdrop-filter: blur(5px);
-            border-bottom: 2px solid #ba68c8;
-        }
-        
-        .nav-btn {
-            background: linear-gradient(to bottom, #ba68c8, #9575cd);
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: bold;
-            transition: all 0.3s;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .nav-btn:hover {
-            background: linear-gradient(to bottom, #ab47bc, #7e57c2);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        }
-        
-        .nav-btn.active {
-            background: linear-gradient(to bottom, #9c27b0, #7b1fa2);
-            transform: translateY(-1px);
-            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-        }
-        
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: linear-gradient(135deg, #f8bbd0 0%, #e2c2ff 100%);
-            border-top: 5px solid #ba68c8;
-            margin-top: 40px;
-            color: #4a148c;
-            position: relative;
-            cursor: pointer;
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
-            100% { transform: translateY(0px); }
-        }
-        
-        @keyframes heart-pop {
-            0% { transform: scale(0); opacity: 0; }
-            50% { transform: scale(1.2); opacity: 1; }
-            100% { transform: scale(1); opacity: 0; }
-        }
-        
-        .float-animate {
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        .hidden {
-            display: none;
-        }
-        
-        /* Scott Pilgrim theme elements */
-        .scott {
-            position: absolute;
-            width: 100px;
-            bottom: -20px;
-            left: 50px;
-            z-index: 1;
-            opacity: 0.7;
-            filter: hue-rotate(20deg);
-        }
-        
-        .ramona {
-            position: absolute;
-            width: 100px;
-            bottom: -20px;
-            right: 50px;
-            z-index: 1;
-            opacity: 0.7;
-            filter: hue-rotate(-10deg);
-        }
-        
-        .stars {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="1" fill="%23ba68c8"/></svg>') repeat;
-            opacity: 0.1;
-            z-index: 0;
-        }
-        
-        .pixel-text {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 0.8em;
-            color: #7b1fa2;
-        }
-        
-        /* New floral elements */
-        .floral {
-            position: absolute;
-            width: 60px;
-            opacity: 0.6;
-            z-index: 0;
-        }
-        
-        .floral-1 {
-            top: 20px;
-            right: 30px;
-            transform: rotate(15deg);
-        }
-        
-        .floral-2 {
-            bottom: 40px;
-            left: 40px;
-            transform: rotate(-10deg);
-        }
-        
-        .floral-3 {
-            top: 100px;
-            left: 30px;
-            transform: rotate(5deg);
-        }
-        
-        /* Password modal */
-        .password-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(74, 20, 140, 0.9);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-        
-        .password-box {
-            background: linear-gradient(135deg, #e2c2ff 0%, #f8bbd0 100%);
-            padding: 30px;
-            border-radius: 10px;
-            border: 3px solid #ba68c8;
-            box-shadow: 0 0 20px #d1c4e9;
-            text-align: center;
-            max-width: 400px;
-        }
-        
-        .password-box h2 {
-            color: #6a1b9a;
-            margin-top: 0;
-        }
-        
-        .password-box input {
-            padding: 10px;
-            margin: 15px 0;
-            width: 80%;
-            border: 2px solid #ba68c8;
-            border-radius: 5px;
-            font-family: 'Courier New', Courier, monospace;
-        }
-        
-        .password-box button {
-            background: linear-gradient(to bottom, #ba68c8, #9575cd);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: bold;
-        }
-        
-        .password-box button:hover {
-            background: linear-gradient(to bottom, #ab47bc, #7e57c2);
-        }
-        
-        /* Heart pop effect */
-        .heart-pop {
-            position: absolute;
-            font-size: 24px;
-            color: #9c27b0;
-            pointer-events: none;
-            animation: heart-pop 1.5s ease-out forwards;
-        }
-        
-        .love-message {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            border: 3px solid #ba68c8;
-            box-shadow: 0 0 20px rgba(156, 39, 176, 0.5);
-            z-index: 1001;
-            display: none;
-        }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Password Modal -->
+    <div class="floating-hearts" id="floatingHearts"></div>
     <div class="password-modal" id="passwordModal">
         <div class="password-box">
-            <h2>Enter Password</h2>
-            <p>To see this special message for Fatima</p>
+            <h2>PASSWORD</h2>
+            <p>For Fatima only! 🩷</p>
             <input type="password" id="passwordInput" placeholder="Type the password...">
             <button onclick="checkPassword()">Enter</button>
         </div>
     </div>
-    
-    <!-- Love Message -->
     <div class="love-message" id="loveMessage">
-        <h2 style="color: #9c27b0; text-align: center;">I'll always love you, Timsee 💜</h2>
+        <h2>I'll always love you, Timsee 💜</h2>
     </div>
-
-    <div class="stars"></div>
-    <!-- Floral decorations -->
-    <img src="pngtree-cartoon-purple-flower-in-beautiful-style-png-image_4671590.png" alt="floral" class="floral floral-1">
-    <img src="pngtree-cartoon-purple-flower-in-beautiful-style-png-image_4671590.png" alt="floral" class="floral floral-2">
-    <img src="pngtree-cartoon-purple-flower-in-beautiful-style-png-image_4671590.png" alt="floral" class="floral floral-3">
-    
-    <header>
-        
-        <img src="42dbda054c3774d.png" alt="Ramona Flowers" class="ramona float-animate">
-        <div class="container">
-            <h1>GET WELL SOON, <span style="color: #9c27b0;">FATIMA</span>!</h1>
-            <p class="pixel-text">LEVEL UP YOUR HEALTH! +1 TO IMMUNITY!</p>
-        </div>
-    </header>
-    
-    <div class="container">
-        <!-- Navigation -->
-        <div class="nav">
-            <button class="nav-btn active" onclick="showPage('about')">About My Good Girl</button>
+    <div class="container hidden" id="siteContent">
+        <nav class="nav" id="mainNav">
+            <button class="nav-btn active" onclick="showPage('about')">Home</button>
             <button class="nav-btn" onclick="showPage('us')">Our Story</button>
             <button class="nav-btn" onclick="showPage('qualities')">Why I Love You</button>
             <button class="nav-btn" onclick="showPage('nicknames')">Nicknames</button>
-            <button class="nav-btn" onclick="showPage('memories')">Favorite Memories</button>
-            <button class="nav-btn" onclick="showPage('pictures')">Our Pictures</button>
-            <button class="nav-btn" onclick="showPage('confession')">Secret Confession</button>
-        </div>
-        
-        <!-- About Page -->
+            <button class="nav-btn" onclick="showPage('memories')">Memories</button>
+            <button class="nav-btn" onclick="showPage('pictures')">Gallery</button>
+            <button class="nav-btn" onclick="showPage('music')">Our Songs</button>
+            <button class="nav-btn" onclick="showPage('wishes')">Birthday Wishes</button>
+            <button class="nav-btn" onclick="showPage('future')">Our Future</button>
+            <button class="nav-btn" onclick="showPage('surprise')">Surprise</button>
+            <button class="nav-btn" onclick="showPage('confession')">Confession</button>
+            <button class="mobile-nav-toggle" id="mobileNavToggle">
+                <i class="fas fa-bars"></i> MENU
+            </button>
+        </nav>
+        <div class="mobile-nav-container" id="mobileNavContainer"></div>
         <div id="about" class="page">
-            <div class="content">
-                <h2>ABOUT MY <span style="color: #9c27b0;">GOOD GIRL</span></h2>
-                <div class="pixel-border" style="padding: 20px; margin-top: 20px; background-color: rgba(255, 255, 255, 0.7);">
-                    <p><strong>Name:</strong> Fatima Waseem (aka The Prettiest Girl Ever)</p>
-                    <p><strong>Age:</strong> 20 (but ageless beauty)</p>
-                    <p><strong>Birthday:</strong> 6th June (mark your calendars!)</p>
-                    <p><strong>Favourite colour:</strong> <span style="color: #9c27b0;">Purple</span> (like this website!)</p>
-                    <p><strong>Favourite anime:</strong> Gintama (we need to watch together!)</p>
-                    <p><strong>Favourite book:</strong> BL mangas (you little freak 😘)</p>
-                    <p><strong>Favourite person:</strong> Me (as it should be!)</p>
-                    <p><strong>Favourite place:</strong> My arms (and I love having you there)</p>
-                    <p><strong>Favourite song:</strong> Blue Hair (it's our song now)</p>
-                    <p><strong>Favourite Fast Food:</strong> KFC (colonel sanders approves)</p>
-                    <p><strong>Favourite Flower:</strong> Night Blooming Jasmine (just like you - beautiful at all hours)</p>
+            <div class="pixel-balloons">
+                <span class="pixel-balloon blue"></span>
+                <span class="pixel-balloon pink"></span>
+            </div>
+            <div class="birthday-pixel-bg">
+                <div class="pixel-birthday-sign">
+                    <div class="pixel-border-sign">
+                        <span class="pixel-happy">HAPPY</span>
+                        <span class="pixel-birthday">BIRTHDAY</span>
+                        <span class="pixel-name">FATIMA WASEEM</span>
+                    </div>
                 </div>
-                <div style="text-align: center; margin-top: 20px;">
-                    <span class="pixel-heart">💖</span>
-                    <span class="pixel-heart">💜</span>
-                    <span class="pixel-heart">🌸</span>
+                <div class="pixel-animals">
+                    <span class="cat-grey"></span>
+                    <span class="birthday-cake"></span>
+                    <span class="cat-black"></span>
+                </div>
+            </div>
+            <div style="margin-top:40px;">
+                <div class="pixel-border">
+                    <span>You're the most precious, beautiful, hilarious, loving, and brave girl I know.<br><br>
+                    May this year bring you every single thing your heart wants.<br><br>
+                    Love you, birthday girl! 💜🎂</span>
+                </div>
+                <div class="pixel-border" style="text-align: center;">
+                    <h3 style="margin: 0 0 10px 0;">Countdown to Your Birthday!</h3>
+                    <div class="countdown" id="countdown">
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="days">00</div>
+                            <div class="countdown-label">Days</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="hours">00</div>
+                            <div class="countdown-label">Hours</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="minutes">00</div>
+                            <div class="countdown-label">Minutes</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="seconds">00</div>
+                            <div class="countdown-label">Seconds</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pixel-border" style="text-align: center;">
+                    <strong>Birthday:</strong> 6th June &nbsp;|&nbsp;
+                    <strong>Favourite colour:</strong> Purple &nbsp;|&nbsp;
+                    <strong>Favourite flower:</strong> Night Blooming Jasmine
+                </div>
+                <div class="love-note">
+                    Every moment with you feels like a celebration. Today, the world celebrates you - the most amazing person I know.
                 </div>
             </div>
         </div>
-        
-        <!-- Our Story Page -->
         <div id="us" class="page hidden">
-            <div class="content">
-                <h2>OUR <span style="color: #9c27b0;">LOVE STORY</span></h2>
-                <div style="background-color: rgba(206, 147, 216, 0.2); padding: 20px; border-radius: 5px; border: 1px dashed #ba68c8;">
+            <div class="pixel-border">
+              <h2>OUR LOVE STORY</h2>
+                <div class="pixel-border">
                     <p><strong>18 Aug 2023:</strong> We saw each other for the first time (little did we know...)</p>
                     <p><strong>17 March 2024:</strong> Matched on Bumble (destiny knocking!)</p>
                     <p><strong>18 March 2024:</strong> You unmatched (you little tease!)</p>
                     <p><strong>15 May 2024:</strong> I was left speechless by your beauty (still am every day)</p>
                     <p><strong>20 Aug 2024:</strong> I joined HRS (fate's intervention)</p>
-                    <p><strong>22 Aug 2024:</strong> That coffee date where we became friends (best decision ever)</p>
+                    <p><strong>22 Aug 2024:</strong> Coffee date where we became friends (best decision ever)</p>
                     <p><strong>2nd Sept 2024:</strong> We got together (best day of my life)</p>
-                    <p><strong>4th Sept 2024:</strong> We kissed for the first time (electric!)</p>
+                    <p><strong>4th Sept 2024:</strong> First kiss (electric!)</p>
+                </div>
+                <div class="pixel-border" style="margin-top: 24px;">
+                    <span style="font-style: italic; color: var(--primary-purple);">"It's amazing how our fates brought us together. For so long we were moving parallel and suddenly we intercepted each other's path."</span>
                 </div>
                 
-                <div style="margin-top: 30px; text-align: center;">
-                    <p style="font-style: italic; color: #7e57c2;">"It's amazing how our fates brought us together. For so long we were moving parallel and suddenly we intercepted each other's path."</p>
+                <!-- Love Note -->
+                <div class="love-note">
+                    Our story is my favorite story - full of unexpected turns, beautiful moments, and a love that keeps growing stronger every day.
                 </div>
             </div>
         </div>
-        
-        <!-- Qualities Page -->
         <div id="qualities" class="page hidden">
-            <div class="content">
-                <h2>WHY I <span style="color: #9c27b0;">LOVE YOU</span></h2>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;">
-                    <div style="background-color: rgba(248, 187, 208, 0.3); padding: 15px; border-radius: 5px; border: 1px solid #f8bbd0;">
-                        <p>✓ She is prettiest ever</p>
-                        <p>✓ Her blue hair</p>
-                        <p>✓ Her humour</p>
-                        <p>✓ Her freaky nature</p>
-                        <p>✓ Her almond eyes</p>
-                        <p>✓ Her caring nature</p>
-                        <p>✓ Her loyalty</p>
-                    </div>
-                    <div style="background-color: rgba(248, 187, 208, 0.3); padding: 15px; border-radius: 5px; border: 1px solid #f8bbd0;">
-                        <p>✓ Her ability to make me express myself freely</p>
-                        <p>✓ Her voice</p>
-                        <p>✓ Her voice (when sleepy)</p>
-                        <p>✓ The way she looks at me</p>
-                        <p>✓ Her love for me</p>
-                        <p>✓ Her always reassuring me</p>
-                        <p>✓ Her always obeying me</p>
-                    </div>
-                    <div style="background-color: rgba(248, 187, 208, 0.3); padding: 15px; border-radius: 5px; border: 1px solid #f8bbd0; grid-column: span 2;">
-                        <p>✓ Her always listening to my yaps</p>
-                        <p>✓ Her never judging me</p>
-                        <p>✓ Her loving my bike</p>
-                        <p>✓ Her complimenting me</p>
-                        <p>✓ Her making me feel better about myself</p>
-                        <p>✓ She herself</p>
-                    </div>
+            <div class="pixel-border">
+                 <h2>WHY I LOVE YOU</h2>
+                <div class="pixel-border">
+                    <ul>
+                        <li>She is the prettiest ever</li>
+                        <li>Her blue hair</li>
+                        <li>Her humour</li>
+                        <li>Her freaky nature</li>
+                        <li>Her almond eyes</li>
+                        <li>Her caring nature</li>
+                        <li>Her loyalty</li>
+                        <li>Her ability to make me express myself freely</li>
+                        <li>Her voice (especially when sleepy)</li>
+                        <li>The way she looks at me</li>
+                        <li>Her love for me</li>
+                        <li>Her always reassuring me</li>
+                        <li>Her always obeying me</li>
+                        <li>Her always listening to my yaps</li>
+                        <li>Her never judging me</li>
+                        <li>Her loving my bike</li>
+                        <li>Her complimenting me</li>
+                        <li>Her making me feel better about myself</li>
+                        <li>She herself</li>
+                    </ul>
+                    <div style="text-align: center; margin-top: 18px;">
+                        <span style="color: var(--primary-purple);">Basically, <strong>everything</strong> about you is perfect to me.</span>
+                           </div>
                 </div>
-                <div style="text-align: center; margin-top: 20px;">
-                    <p style="color: #7e57c2;">Basically, <strong>everything</strong> about you is perfect to me.</p>
+                
+                <!-- Love Note -->
+                <div class="love-note">
+                    The best part of my day is any moment I get to spend with you. You make ordinary moments extraordinary.
                 </div>
-            </div>
+           
+                    </div>
         </div>
-        
-        <!-- Nicknames Page -->
         <div id="nicknames" class="page hidden">
-            <div class="content">
-                <h2>YOUR <span style="color: #9c27b0;">NICKNAMES</span></h2>
-                <div style="text-align: center; margin-top: 30px;">
+            <div class="pixel-border">
+                 <h2>NICKNAMES</h2>
+                <div class="pixel-border" style="text-align: center; margin-top: 20px;">
                     <span class="nickname">Honeypie</span>
                     <span class="nickname">Cutu</span>
                     <span class="nickname">Begum</span>
                     <span class="nickname">Biwi</span>
                     <span class="nickname">Master</span>
                     <span class="nickname">Mommy</span>
-                    <span class="nickname">Timsee <33</span>
+                    <span class="nickname">Timsee &lt;33</span>
                     <span class="nickname">Pretty girl</span>
                     <span class="nickname">Good girl</span>
                     <span class="nickname">Baby girl</span>
                     <span class="nickname">Dangar</span>
                 </div>
-                <div style="text-align: center; margin-top: 40px;">
-                    <p style="color: #7e57c2;">And countless more that I'll keep inventing because one nickname could never capture all of you.</p>
+                <div class="pixel-border" style="margin-top: 20px; text-align: center;">
+                    And countless more that I'll keep inventing because one nickname could never capture all of you.
+                </div>
+                
+                <!-- Love Note -->
+                <div class="love-note">
+                    Every nickname is just another way to say "I love you" - because no single word could ever contain all that you mean to me.
                 </div>
             </div>
         </div>
-        
-        <!-- Memories Page -->
         <div id="memories" class="page hidden">
-            <div class="content">
-                <h2>OUR <span style="color: #9c27b0;">FAVORITE MEMORIES</span></h2>
-                <div style="margin-top: 20px;">
-                    <div class="memory">
-                        <p>Kissing on staircase</p>
-                    </div>
-                    <div class="memory">
-                        <p>That day at Joyland</p>
-                    </div>
-                    <div class="memory">
-                        <p>Our first date on my bike</p>
-                    </div>
-                    <div class="memory">
-                        <p>Going to Barki to reassure aunty</p>
-                    </div>
-                    <div class="memory">
-                        <p>Phase 7 stuff 😋</p>
-                    </div>
-                    <div class="memory">
-                        <p>Forgetting ID card at FC and watching Joker 2</p>
-                    </div>
-                    <div class="memory">
-                        <p>Sitting at 3rd floor terrace when I realized that I actually like you way more than I think</p>
-                    </div>
-                    <div class="memory">
-                        <p>Kissing on 3rd floor with my pant getting dirty</p>
-                    </div>
-                    <div class="memory">
-                        <p>Getting my helmet stolen</p>
-                    </div>
-                    <div class="memory">
-                        <p>That KFC and metro outing as friends</p>
-                    </div>
-                    <div class="memory">
-                        <p>Park picnic</p>
-                    </div>
-                    <div class="memory">
-                        <p>Holding your hand for the first time when you burned it and showed it to me (we were friends)</p>
-                    </div>
-                    <div class="memory">
-                        <p>Seeing you in my green shirt</p>
-                    </div>
-                    <div class="memory">
-                        <p>Reading my poetry at Tim Hortons</p>
-                    </div>
-                    <div class="memory">
-                        <p>Hugging you on staircase to reassure you</p>
-                    </div>
-                    <div class="memory">
-                        <p>That diarrhoea excuse</p>
-                    </div>
+            <div class="pixel-border">
+                <h2>OUR FAVORITE MEMORIES</h2>
+                <div style="margin-top: 16px;">
+                    <div class="memory">Kissing on staircase</div>
+                    <div class="memory">That day at Joyland</div>
+                    <div class="memory">Our first date on my bike</div>
+                    <div class="memory">Going to Barki to reassure aunty</div>
+                    <div class="memory">Phase 7 stuff 😋</div>
+                    <div class="memory">Forgetting ID card at FC and watching Joker 2</div>
+                    <div class="memory">Sitting at 3rd floor terrace when I realized that I actually like you way more than I think</div>
+                    <div class="memory">Kissing on 3rd floor with my pant getting dirty</div>
+                    <div class="memory">Getting my helmet stolen</div>
+                    <div class="memory">That KFC and metro outing as friends</div>
+                    <div class="memory">Park picnic</div>
+                    <div class="memory">Holding your hand for the first time when you burned it and showed it to me (we were friends)</div>
+                    <div class="memory">Seeing you in my green shirt</div>
+                    <div class="memory">Reading my poetry at Tim Hortons</div>
+                    <div class="memory">Hugging you on staircase to reassure you</div>
+                    <div class="memory">That diarrhoea excuse</div>
                 </div>
-                <div style="text-align: center; margin-top: 20px;">
-                    <p style="color: #7e57c2;">And so many more memories we've made and will continue to make...</p>
+                <div class="pixel-border" style="margin-top: 20px; text-align: center;">
+                    And so many more memories we've made and will continue to make...
+                </div>
+                
+                <!-- Love Note -->
+                <div class="love-note">
+                    With you, every memory is special - even the ordinary ones become treasures when we're together.
                 </div>
             </div>
         </div>
-        
-        <!-- Pictures Page -->
         <div id="pictures" class="page hidden">
-            <div class="content">
-                <h2>OUR <span style="color: #9c27b0;">PICTURES</span></h2>
-                <h3 style="color: #7e57c2; margin-top: 30px;">My Favorite Pictures of Us</h3>
+            <div class="pixel-border">
+                <h2>OUR GALLERY</h2>
+                <h3>My Favorite Pictures of Us</h3>
                 <div class="gallery">
-                    <!-- Replace with actual image paths -->
-                    <img src="WhatsApp Image 2025-05-14 at 04.17.41_c6680bcd.jpg" alt="Us together">
-                    <img src="WhatsApp Image 2025-05-18 at 23.39.46_9bac5066.jpg" alt="Us together">
-                    <img src="WhatsApp Image 2025-05-18 at 23.39.48_1e8481d1.jpg" alt="Us together">
-                    <img src="WhatsApp Image 2025-05-18 at 23.39.48_a5d37049.jpg" alt="Us together">
+                    <div class="gallery-item">
+                        <img src="WhatsApp Image 2025-05-14 at 04.17.41_c6680bcd.jpg" alt="Us together" class="gallery-img">
+                        <div class="gallery-caption">Qawali Night</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="WhatsApp Image 2025-05-18 at 23.39.46_9bac5066.jpg" alt="Us together" class="gallery-img">
+                        <div class="gallery-caption">Kaleshi din</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="WhatsApp Image 2025-05-18 at 23.39.48_1e8481d1.jpg" alt="Us together" class="gallery-img">
+                        <div class="gallery-caption">Our First Date</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="WhatsApp Image 2025-05-18 at 23.39.48_a5d37049.jpg" alt="Us together" class="gallery-img">
+                        <div class="gallery-caption">You in my Arms</div>
+                    </div>
                 </div>
                 
-                <h3 style="color: #7e57c2; margin-top: 40px;">My Favorite Pictures of You</h3>
+                <h3>My Favorite Pictures of You</h3>
                 <div class="gallery">
-                    <!-- Replace with actual image paths -->
-                    <img src="WhatsApp Image 2025-05-18 at 23.39.47_a33e7550.jpg" alt="Fatima">
-                    <img src="WhatsApp Image 2025-05-18 at 23.39.47_d16fe915.jpg" alt="Fatima">
-                    <img src="WhatsApp Image 2025-05-18 at 23.39.48_2b3be5a4.jpg" alt="Fatima">
-                    <img src="WhatsApp Image 2025-05-18 at 23.39.49_e6beec9f.jpg" alt="Fatima">
+                    <div class="gallery-item">
+                        <img src="WhatsApp Image 2025-05-18 at 23.39.47_a33e7550.jpg" alt="Fatima" class="gallery-img">
+                        <div class="gallery-caption">My desi baddie</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="WhatsApp Image 2025-05-18 at 23.39.47_d16fe915.jpg" alt="Fatima" class="gallery-img">
+                        <div class="gallery-caption">Kfc eater</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="WhatsApp Image 2025-05-18 at 23.39.48_2b3be5a4.jpg" alt="Fatima" class="gallery-img">
+                        <div class="gallery-caption">Chai khoka baddie</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="WhatsApp Image 2025-05-18 at 23.39.49_e6beec9f.jpg" alt="Fatima" class="gallery-img">
+                        <div class="gallery-caption">Cocaine fr</div>
+                    </div>
                 </div>
                 
-                <div style="text-align: center; margin-top: 20px;">
-                    <p style="color: #7e57c2;">Every picture with you is my favorite because it's you.</p>
+                <div class="pixel-border" style="margin-top:20px; text-align: center;">
+                    Every picture with you is my favorite because it's you.
+                </div>
+                
+                <!-- Love Note -->
+                <div class="love-note">
+                    Your beauty shines through in every photo, but nothing compares to seeing you in person - your smile lights up my world.
                 </div>
             </div>
         </div>
-        
-        <!-- Confession Page -->
-        <div id="confession" class="page hidden">
-            <div class="content">
-                <h2>SECRET <span style="color: #9c27b0;">CONFESSION</span></h2>
-                <div class="confession">
-                    <p>I had a minor crush on you from the first day we met. I even asked Umair in first semester about you and was pretty disappointed when he told me you were taken, but then you being in relationship and Afnan being madly after you. I decided not to tell anyone about how I feel for you.</p>
-                    
-                    <p>I remember swiping right on Bumble and matching with you the next instant. I was ecstatic. I couldn't believe it. But then you decided to back out and I always wondered why.</p>
-                    
-                    <p>Then in second semester I had that Velo moment, was it the velo? Idk but mannn I saw you and you looked so pretty I swear I could see Saram was kinda stoked too bro immediately asked "issi ki sath match howa tha na" AND DAMN GIRL I NEVER COULD HAVE IMAGINED IN THAT MOMENT KAY FEW MONTHS LATER ON WE WOULD BE SPENDING EVERY FUCKING DAY TOGETHER.</p>
-                    
-                    <p>AND I LITERALLY USED TO STALK YOU 😭 I swear. LIKE LITERALLY I USED TO STALK YOU AND LOOK AT UR "MATERIAL GWORLS" highlight. But then you uploaded those stories IVS walon kay sath and after that I kinda backed off ngl cuz I thought maybe you were pretty much like baqi IVS members.</p>
-                    
-                    <p>But I finally decided my luck on you after I saw your text for HRS in IVS group and decided to text you. I remember being all nervous when you called me for interview and I used all my social muscles to keep a normal conversation and hoping I don't creep you out. Talked to you bahanay bahanay sae memes kay chakkar sae.</p>
-                    
-                    <p>And when you asked me for a coffee I swear I felt like damn I'm smooth 😭 I EVEN SENT THAT TEXT SS TO AFNAN TO RUB IT IN HIS FACE. But then you were kinda late and I didn't want to seem to vaila and decided to go home. I remember unlocking my helmet when I said let's check one last time and IN THAT VERY MOMENT YOU TEXTED AND I CAME BACK FROM PARKING RIGHT AWAY EVEN WHEN YOU SAID WE COULD HAVE DONE IT SOME ANOTHER TIME.</p>
-                    
-                    <p>I knew this was it quickly got into the lift. I remember being awkward asf and shy while you were ordering. I was literally forcing the voice to come out to speak as I was literally not even able to do that 😭. But you started talking, gave me a topic to yap on and then I slowly got into my comfort zone.</p>
-                    
-                    <p>I am so sorry for all that Amal texts it's just at that time starting a new relationship seemed a little too scary as compared to just jumping back to the old one and I am so sorry for that Fatima. After breakup I had to pick myself up I had a 2.5 GPA, my relations with my mama and Hamdan were TENSE, I was literally a loner in uni and in general shit was just not going my way and I had to pick myself up alone, I feared going down that path again.</p>
-                    
-                    <p>But then I decided to get past her and decided to start a new beginning with the amazing person I had obsessed over and met right at the perfect moment. Texted Meerab and Rayyan about you that I have met someone who brings joy to my life so effortlessly and I'm getting v close to her and I hope things go good this time.</p>
-                    
-                    <p>I remember the day we took Umair's interview, you came in with a burnt hand and showed it to me and I held it us bahanay sae and it felt so good holding your soft delicate hand as you showed me how you got them burnt and then you gave me your ring which I still love wearing.</p>
-                    
-                    <p>And then when I was sitting at that third terrace with you sitting beside you copying me. I realised how much I liked you at that very moment, for just staying there till 8 for you baarish kay bahanay sae, getting bullied but still somehow enjoying it. Tbh I didn't give a shit about the rain honestly I love riding bike in the rain it's literally one of the best feelings ever but I stayed late cuz I wanted to spend time with you.</p>
-                    
-                    <p>I wanted to confess that day and I was literally counting all the possibilities that could have happened and I decided to give it a go but I couldn't. I wanted to speak but it was like my voice wasn't coming out and I was left voiceless. And I just decided not to as it might be awkward and just said goodbye.</p>
-                    
-                    <p>I literally befriended Shafqat again because of you, waited for you and then ordered Thai beef noodles as soon as you told me to and didn't even taste it till you came and after that I ate it through your jhoota fork, I felt so good being invited to the movie with you even tho I'm sorry I was sleeping but the fact that I was your first priority to hang out with was the best feeling ever.</p>
-                    
-                    <p>Then I finally decided to have the courage to confess my feelings and to be very honest I had very low expectations of that working out. Like literally but I just had to get that out, it was eating me holding it inside of me everyday hoping I might be able express my feelings. I just decided to give it a go.</p>
-                    
-                    <p>For a moment I was anxious when you asked me if I was being serious or was this a joke but then you started bullying me and said "I do like the dynamic between us" and I was dancing in my room as I read that text knowing that I had somehow pulled you.</p>
-                    
-                    <p>Literally that night and the next day still feels like a beautiful dream. It's amazing how our fates have brought us together. For so long we were moving parallel and suddenly we intercepted each other's path and I just love that how we clicked in a moment. Within two days I had you added in my Batman account.</p>
-                    
-                    <p>It's like we are made for each other and I hope we stay together forever. I love you so much 💗.</p>
+        <div id="music" class="page hidden">
+            <div class="pixel-border">
+                <h2>Our Songs</h2>
+                <div class="music-player" id="musicPlayerSection">
+                    <div id="nowPlaying">Now Playing: </div>
+                    <div class="player-controls">
+                        <button class="control-btn" onclick="prevSong()"><i class="fas fa-backward"></i></button>
+                        <button class="control-btn play-pause" onclick="togglePlay()"><i id="playPauseIcon" class="fas fa-play"></i></button>
+                        <button class="control-btn" onclick="nextSong()"><i class="fas fa-forward"></i></button>
+                    </div>
+                    <div class="progress-container" onclick="seekSong(event)">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                    <div class="time-info">
+                        <span id="currentTime">0:00</span>
+                        <span id="duration">0:00</span>
+                    </div>
+                    <div class="song-list" id="songList"></div>
                 </div>
-                <div style="text-align: center; margin-top: 20px;">
-                    <span class="pixel-heart">💖</span>
-                    <span class="pixel-heart">💜</span>
-                    <span class="pixel-heart">🌸</span>
-                </div>
+            </div>
+        </div>
+
+        <!-- Add these new pages after the existing ones -->
+<div id="wishes" class="page hidden">
+    <div class="pixel-border">
+        <h2>Birthday Wishes</h2>
+        <div class="wish-container">
+            <div class="wish-card">
+                <h3>Health & Happiness</h3>
+                <p>May you always be blessed with good health and endless happiness.</p>
+            </div>
+            <div class="wish-card">
+                <h3>Adventure</h3>
+                <p>May this year bring you exciting adventures and beautiful memories.</p>
+            </div>
+            <div class="wish-card">
+                <h3>Love</h3>
+                <p>May our love continue to grow stronger with each passing day.</p>
+            </div>
+            <div class="wish-card">
+                <h3>Success</h3>
+                <p>May all your dreams and aspirations come true this year.</p>
             </div>
         </div>
     </div>
-    
-    <footer onclick="showLoveMessage()">
+</div>
+
+<div id="future" class="page hidden">
+    <div class="pixel-border">
+        <h2>Our Future Together</h2>
+        <div class="future-plan">
+            <div class="plan-icon">🏡</div>
+            <h3>Home Together</h3>
+            <p>A cozy place filled with love, laughter, and our favorite things.</p>
+        </div>
+        <div class="future-plan">
+            <div class="plan-icon">✈️</div>
+            <h3>Travel Adventures</h3>
+            <p>Exploring new places and creating unforgettable memories together. I really wanna visit china ngl</p>
+        </div>
+        <div class="future-plan">
+            <div class="plan-icon">🐾</div>
+            <h3>Pets</h3>
+            <p>Adopting cats and watching them become part of our little family.</p>
+        </div>
+        <div class="future-plan">
+            <div class="plan-icon">🌅</div>
+            <h3>Growing Old Together</h3>
+            <p>Cherishing every moment as we build a lifetime of love.</p>
+        </div>
+    </div>
+</div>
+
+<div id="surprise" class="page hidden">
+    <div class="pixel-border">
+        <h2>A Special Surprise</h2>
+        <div class="surprise-content">
+            <p>Close your eyes and imagine...</p>
+            <div class="surprise-reveal">
+                <p>Your actual surprise is waiting for you in real life!</p>
+                <button class="surprise-btn" onclick="showSurprise()">Reveal Hint</button>
+                <p id="surpriseHint" class="hidden">Ain't no way im telling you anything 💜</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div id="confession" class="page hidden">
+            <div class="pixel-border confession password">
+                <h2>Confession</h2>
+               <p>From the moment we first met, there was something about you that captured my heart. I remember asking Umair about you in our first semester, my small crush turning to disappointment when I learned you were taken. When we matched on Bumble, I was ecstatic - only for my hopes to fade when you unmatched. Life has its funny ways, doesn't it?</p>
+
+            <p>That day in second semester when I saw you at Velo (was it Velo?), you took my breath away. Saram noticed too, teasing me about our Bumble match. Little did I know then that months later, we'd be inseparable. I'll admit it - I used to secretly admire you from afar, watching your "Material GwOrls" highlights, until those IVS stories made me hesitate.</p>
+
+            <p>When I saw your HRS post, it felt like fate giving me one last chance. I was so nervous during our interview, using memes as an excuse to keep talking to you. That coffee date? I felt like the smoothest guy alive - even sent the screenshot to Afnan to rub it in! I nearly left when you were late, but something told me to wait. The moment your text came, I rushed back from the parking without hesitation.</p>
+
+            <p>Our first meeting was awkward magic - me struggling to speak, you effortlessly guiding the conversation. I'm sorry for those confusing Amal texts; I was scared of new beginnings when old comforts seemed safer. But my life was changing - rebuilding my GPA, repairing family relationships, finding myself. Meeting you came at the perfect time.</p>
+
+            <p>That day on the third-floor terrace, as you sat beside me copying my work, the rain falling around us, I realized how deeply I cared. I stayed not because of the rain (I actually love riding in it), but because I cherished every extra moment with you. I wanted to confess then, but the words stuck in my throat.</p>
+
+            <p>From sharing Thai noodles with your fork to being your first choice for movie night (even if I slept through it), every moment drew me closer. When I finally confessed, I expected nothing - but your response about liking "our dynamic" had me dancing with joy. Within days, you were in my Batman account - a sure sign this was something special.</p>
+
+            <p>Our story feels like destiny. After moving parallel for so long, our paths finally crossed at just the right moment. What we've built since feels like the most beautiful dream. I love you more than words can say, Fatima, and I hope our story never ends.</p>
+            </div>
+        </div>
+    </div>
+    <footer onclick="showLoveMessage()" class="hidden" id="footer">
         <div class="container">
-            <p>Made with love for my good girl, Fatima Waseem</p>
-            <p>Get well soon, my pretty girl 💜</p>
-            <p class="pixel-text">PRESS START TO CONTINUE LOVING EACH OTHER</p>
+            <p>Made with love for my good girl, Fatima Waseem 🎂💜</p>
+            <p>Happy Birthday, my pretty girl!</p>
+            <p>PRESS START TO CONTINUE LOVING EACH OTHER</p>
         </div>
     </footer>
-    
-    <script>
-        // Show password modal on load
-        document.addEventListener('DOMContentLoaded', function() {
-            // For testing, you can comment out the next line to skip password
-            document.getElementById('passwordModal').style.display = 'flex';
-        });
-        
-        // Password check function
-        function checkPassword() {
-            const password = document.getElementById('passwordInput').value;
-            const correctPassword = "ilovetimsee";
-            
-            if (password.toLowerCase() === correctPassword) {
-                document.getElementById('passwordModal').style.display = 'none';
-                showPage('about');
-            } else {
-                alert("Wrong password! Try again.");
-                document.getElementById('passwordInput').value = '';
-            }
-        }
-        
-        // Allow pressing Enter in password field
-        document.getElementById('passwordInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                checkPassword();
-            }
-        });
-        
-        // Function to show selected page and hide others
-        function showPage(pageId) {
-            // Hide all pages
-            const pages = document.getElementsByClassName('page');
-            for (let i = 0; i < pages.length; i++) {
-                pages[i].classList.add('hidden');
-            }
-            
-            // Show selected page
-            document.getElementById(pageId).classList.remove('hidden');
-            
-            // Update active button
-            const buttons = document.querySelectorAll('.nav-btn');
-            buttons.forEach(button => {
-                button.classList.remove('active');
-                if (button.textContent.trim() === document.getElementById(pageId).querySelector('h2').textContent.trim() || 
-                    button.getAttribute('onclick').includes(pageId)) {
-                    button.classList.add('active');
-                }
-            });
-        }
-        
-        // Function to create heart pop effect
-        function createHeart(e) {
-            const heart = document.createElement('div');
-            heart.className = 'heart-pop';
-            heart.innerHTML = '💜';
-            
-            heart.style.left = (e.clientX - 10) + 'px';
-            heart.style.top = (e.clientY - 10) + 'px';
-            
-            document.body.appendChild(heart);
-            
-            // Remove heart after animation
-            setTimeout(() => {
-                heart.remove();
-            }, 1500);
-        }
-        
-        // Function to show love message
-        function showLoveMessage() {
-            const footer = document.querySelector('footer');
-            
-            // Create hearts on click
-            for (let i = 0; i < 20; i++) {
-                setTimeout(() => {
-                    createHeart({
-                        clientX: footer.getBoundingClientRect().left + Math.random() * footer.offsetWidth,
-                        clientY: footer.getBoundingClientRect().top + Math.random() * footer.offsetHeight
-                    });
-                }, i * 100);
-            }
-            
-            // Show message
-            const message = document.getElementById('loveMessage');
-            message.style.display = 'block';
-            
-            // Hide message after 3 seconds
-            setTimeout(() => {
-                message.style.display = 'none';
-            }, 3000);
-        }
-        
-        // Add some fun effects
-        const hearts = document.querySelectorAll('.pixel-heart');
-        hearts.forEach(heart => {
-            heart.addEventListener('mouseover', function() {
-                this.style.transform = 'scale(1.3)';
-                this.style.transition = 'transform 0.3s';
-            });
-            
-            heart.addEventListener('mouseout', function() {
-                this.style.transform = 'scale(1)';
-            });
-        });
-        
-        // Add floating animation to header on click
-        const header = document.querySelector('header');
-        header.addEventListener('click', function() {
-            this.classList.add('float-animate');
-            setTimeout(() => {
-                this.classList.remove('float-animate');
-            }, 3000);
-        });
-    </script>
+    <audio id="audioPlayer"></audio>
+    <script src="script.js"></script>
 </body>
 </html>
